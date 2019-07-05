@@ -11,7 +11,7 @@ RUN wget https://habx-artifacts.s3-eu-west-1.amazonaws.com/ortools-cppyy.tar.gz 
     cp -pr ortools-cppyy/lib/* /usr/lib/ && \
     cp -pr ortools-cppyy/include/* /usr/local/site-packages/cppyy_backend/include/
 
-COPY requirements.txt .
+COPY . .
 
 # GCC 8+ is needed to build cppyy
 RUN apt-get -y install libgeos-dev && \
